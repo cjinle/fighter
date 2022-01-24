@@ -36,6 +36,13 @@ public class Figher : MonoBehaviour
         {
             transform.Translate(0, -step, 0);
         }
+        if (Input.GetMouseButton(0))
+        {
+            var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos.z = 0;
+            //transform.DOMove(pos, .1f);
+            transform.position = pos;
+        }
         m_fireTime += Time.deltaTime;
         if (m_fireTime > 0.4f)
         {

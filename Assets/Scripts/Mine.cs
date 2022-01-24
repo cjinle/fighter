@@ -79,6 +79,14 @@ public class Mine : MonoBehaviour
         }
         //List<int> idxArr2 = idxArr.Sort(x=>Random.value).ToList();
 
+
+        Stack<int> myCache = new Stack<int>();
+        myCache.Push(1);
+        myCache.Push(1);
+        myCache.Push(1);
+        myCache.Push(1);
+
+        myCache.Pop();
     }
 
     void Restart()
