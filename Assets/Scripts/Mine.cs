@@ -69,7 +69,15 @@ public class Mine : MonoBehaviour
 
     void RandomeMine2()
     {
-        // 
+        List<int> idxArr = new List<int>();
+        for (int x = 0; x < m_width; x++)
+        {
+            for (int y = 0; y < m_height; y++)
+            {
+                idxArr.Add(GetIdx(x, y));
+            }
+        }
+        //List<int> idxArr2 = idxArr.Sort(x=>Random.value).ToList();
 
     }
 
@@ -224,11 +232,11 @@ public class Mine : MonoBehaviour
     void Output()
     {
         Debug.Log("---------------------------");
-        for (int i = 0; i < m_height; i++)
+        for (int x = 0; x < m_height; x++)
         {
-            for (int j = 0; j < m_width; j++)
+            for (int y = 0; y < m_width; y++)
             {
-                Debug.Log(OutputFormat((int)GetMine(i, j)));
+                Debug.Log(OutputFormat((int)GetMine(x, y)));
             }
         }
         Debug.Log("---------------------------");

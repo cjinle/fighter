@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-
+using Lok.Tools;
 public class Figher : MonoBehaviour
 {
 
@@ -13,6 +13,7 @@ public class Figher : MonoBehaviour
     void Start()
     {
         transform.DOMove(Vector3.zero, 1f);
+        Test.Index();
     }
 
     void Update()
