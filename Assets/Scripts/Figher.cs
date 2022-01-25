@@ -8,7 +8,11 @@ public class Figher : MonoBehaviour
 
     public GameObject bulletPrefab;
 
+    [SerializeField] AudioSource fireAudio;
+
     float m_fireTime = 0;
+
+    bool audioOpen;
 
     void Start()
     {
@@ -71,12 +75,24 @@ public class Figher : MonoBehaviour
         bullet.transform.position = pos;
         //bullet.SendMessage("SetSpeed", 10f);
         Bullet tmp = bullet.GetComponent<Bullet>();
-        tmp.m_speed = 50f;
+        tmp.m_speed = 10f;
+
+        if (audioOpen)
+        {
+            fireAudio.volume = .5f;
+            fireAudio.Play();
+        }
+        
     }
-    
+
     public void Zero()
     {
         transform.DOMove(Vector3.zero, 1f);
+    }
+
+    public void SetAudio()
+    {
+        audioOpen = !audioOpen;
     }
 
 }
