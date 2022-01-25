@@ -10,6 +10,16 @@ namespace Lok.Tools
         {
             
         }
+
+        public static List<int> GetList(int length)
+        {
+            List<int> myList = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                myList.Add(i);
+            }
+            return myList;
+        }
     }
 
 }
