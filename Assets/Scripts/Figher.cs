@@ -52,6 +52,7 @@ public class Figher : MonoBehaviour
             Fire();
             m_fireTime = 0;
         }
+        
     }
 
     void Fire()
