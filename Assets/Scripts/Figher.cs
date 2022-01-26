@@ -16,7 +16,7 @@ public class Figher : MonoBehaviour
 
     void Start()
     {
-        transform.DOMove(Vector3.zero, 1f);
+        //transform.DOMove(Vector3.zero, 1f);
         foreach (int n in Test.GetList(10))
         {
             Debug.Log("Lok.Tools.GetList: "+n);
