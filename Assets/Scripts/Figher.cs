@@ -50,7 +50,7 @@ public class Figher : MonoBehaviour
         {
             transform.Translate(0, -step, 0);
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetMouseButtonDown(0))
         {
             ChangeCard();
         }
@@ -69,9 +69,10 @@ public class Figher : MonoBehaviour
             
         }
         m_fireTime += Time.deltaTime;
-        if (m_fireTime > 0.4f)
+        if (m_fireTime > .5f)
         {
             Fire();
+            //ChangeCard();
             m_fireTime = 0;
         }
     }
@@ -97,9 +98,9 @@ public class Figher : MonoBehaviour
 
     public void ChangeCard()
     {
-        string[] bgArr = { "blue", "green", "red", "yellow" };
-        card.SendMessage("SetBG", bgArr[Random.Range(0, bgArr.Length - 1)]);
-        card.SendMessage("SetNum", Random.Range(1, 8));
+        var num = (Random.Range(0, 4) << 4) + Random.Range(1, 10);
+        //Debug.Log("ChangeCard: " + num);
+        card.SendMessage("SetNum", num);
     }
 
     public void Zero()

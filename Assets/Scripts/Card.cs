@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 
 public class Card : MonoBehaviour
 {
 
     [SerializeField] Sprite[] nums;
+    [SerializeField] Sprite[] bgs;
     [SerializeField] SpriteRenderer CurSprite;
-    [SerializeField] Sprite blueBg;
-    [SerializeField] Sprite greenBg;
-    [SerializeField] Sprite redBg;
-    [SerializeField] Sprite yellowBg;
-
     [SerializeField] SpriteRenderer bgRenderer;
 
     void Awake()
@@ -24,33 +21,24 @@ public class Card : MonoBehaviour
         //GetComponent<SpriteRenderer>().sprite = redBg;
     }
 
-    public void SetBG(string bg)
-    {
-        Debug.Log("SetBG: " + bg);
-        switch (bg)
-        {
-            case "blue":
-                bgRenderer.sprite = blueBg;
-                break;
-            case "green":
-                bgRenderer.sprite = greenBg;
-                break;
-            case "red":
-                bgRenderer.sprite = redBg;
-                break;
-            case "yellow":
-                bgRenderer.sprite = yellowBg;
-                break;
-        }
-    }
-
     public void SetNum(int num)
     {
-        Debug.Log("SetNum: " + num);
-        if (num > nums.Length)
+        //transform.DOScaleX(0, 1f).SetEase(Ease.Flash);
+        int bgIdx = num >> 4;
+        if (bgIdx >= bgs.Length)
         {
-            return;
+            bgIdx %= bgs.Length;
+        }
+        bgRenderer.sprite = bgs[bgIdx];
+
+        num &= 0x0f;
+        if (num >= nums.Length)
+        {
+            num %= nums.Length;
         }
         CurSprite.sprite = nums[num];
+        //transform.DOScaleX(1, 1f).SetEase(Ease.Flash);
+        //transform.DOScaleX(1, 1f);
+        //Debug.Log("SetBG: " + bgIdx + ", SetNum: " + num);
     }
 }

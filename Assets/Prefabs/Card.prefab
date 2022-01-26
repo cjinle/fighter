@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035076921530470192}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3035076922068692560}
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f4dd88e451b04cc4fb94c119879c5e3b, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 1.16, y: 1.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3035076922068692566
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2cd10b424d34e1142b2ea890e08b8261, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -163,7 +163,7 @@ SpriteRenderer:
   m_Size: {x: 1.16, y: 1.68}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3035076922068692567
@@ -189,9 +189,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: b13e6a73de5bbe2468af96c761d9d06c, type: 3}
   - {fileID: 21300000, guid: f34749045bb375c44870929fb25c9e5c, type: 3}
   - {fileID: 21300000, guid: 4198e12e3ae94ed41a92aa9c8156e7d0, type: 3}
+  bgs:
+  - {fileID: 21300000, guid: 4aec44e32b6d1e6499440305101130e9, type: 3}
+  - {fileID: 21300000, guid: 2cd10b424d34e1142b2ea890e08b8261, type: 3}
+  - {fileID: 21300000, guid: 6e60499aa31fd7d43bca4b64a347ca87, type: 3}
+  - {fileID: 21300000, guid: 6ae21f954d7ce6a40b5bdc954ff17360, type: 3}
   CurSprite: {fileID: 3035076921530470194}
-  blueBg: {fileID: 21300000, guid: 4aec44e32b6d1e6499440305101130e9, type: 3}
-  greenBg: {fileID: 21300000, guid: 2cd10b424d34e1142b2ea890e08b8261, type: 3}
-  redBg: {fileID: 21300000, guid: 6e60499aa31fd7d43bca4b64a347ca87, type: 3}
-  yellowBg: {fileID: 21300000, guid: 6ae21f954d7ce6a40b5bdc954ff17360, type: 3}
   bgRenderer: {fileID: 3035076922068692561}
