@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using Lok.Tools;
+//using Lok.Tools;
 public class Figher : MonoBehaviour
 {
 
     public GameObject bulletPrefab;
+    public GameObject cardPrefab;
 
     [SerializeField] AudioSource fireAudio;
 
@@ -16,11 +17,14 @@ public class Figher : MonoBehaviour
 
     void Start()
     {
+        var card = Instantiate(cardPrefab);
+        card.transform.position = Vector3.zero;
+
+        string[] bgArr = { "blue", "green", "red", "yellow" };
+        card.SendMessage("SetBG", bgArr[Random.Range(0, bgArr.Length-1)]);
+        card.SendMessage("SetNum", Random.Range(1, 8));
+        Debug.Log("init card");
         //transform.DOMove(Vector3.zero, 1f);
-        foreach (int n in Test.GetList(10))
-        {
-            Debug.Log("Lok.Tools.GetList: "+n);
-        }
     }
 
     void Update()
@@ -63,7 +67,6 @@ public class Figher : MonoBehaviour
             Fire();
             m_fireTime = 0;
         }
-        
     }
 
     void Fire()

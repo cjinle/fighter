@@ -775,6 +775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6127439696539436162, guid: 84f40db140feffc4c9a8a93542567cfd, type: 3}
+  cardPrefab: {fileID: 3035076922068692566, guid: 2e6ce541470ddef44aeb3486b1809b4a, type: 3}
   fireAudio: {fileID: 1663072705}
 --- !u!82 &1663072705
 AudioSource:
