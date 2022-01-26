@@ -13,15 +13,15 @@ public class Card : MonoBehaviour
     [SerializeField] Sprite redBg;
     [SerializeField] Sprite yellowBg;
 
-    SpriteRenderer bgRenderer;
+    [SerializeField] SpriteRenderer bgRenderer;
 
     void Awake()
     {
         Debug.Log("card awake");
-        CurSprite.sprite = nums[0];
-        bgRenderer = GetComponent<SpriteRenderer>();
-        bgRenderer.sprite = redBg;
-        GetComponent<SpriteRenderer>().sprite = redBg;
+        //CurSprite.sprite = nums[0];
+        //bgRenderer = GetComponent<SpriteRenderer>();
+        //bgRenderer.sprite = redBg;
+        //GetComponent<SpriteRenderer>().sprite = redBg;
     }
 
     public void SetBG(string bg)

@@ -194,3 +194,4 @@ MonoBehaviour:
   greenBg: {fileID: 21300000, guid: 2cd10b424d34e1142b2ea890e08b8261, type: 3}
   redBg: {fileID: 21300000, guid: 6e60499aa31fd7d43bca4b64a347ca87, type: 3}
   yellowBg: {fileID: 21300000, guid: 6ae21f954d7ce6a40b5bdc954ff17360, type: 3}
+  bgRenderer: {fileID: 3035076922068692561}

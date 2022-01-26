@@ -11,19 +11,22 @@ public class Figher : MonoBehaviour
 
     [SerializeField] AudioSource fireAudio;
 
+    GameObject card;
+
     float m_fireTime = 0;
 
     bool audioOpen;
 
+
     void Start()
     {
-        var card = Instantiate(cardPrefab);
-        card.transform.position = Vector3.zero;
+        
 
-        string[] bgArr = { "blue", "green", "red", "yellow" };
-        card.SendMessage("SetBG", bgArr[Random.Range(0, bgArr.Length-1)]);
-        card.SendMessage("SetNum", Random.Range(1, 8));
+        
         Debug.Log("init card");
+        card = Instantiate(cardPrefab);
+        card.transform.position = Vector3.zero;
+        ChangeCard();
         //transform.DOMove(Vector3.zero, 1f);
     }
 
@@ -46,6 +49,10 @@ public class Figher : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         {
             transform.Translate(0, -step, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            ChangeCard();
         }
         //if (Input.GetMouseButton(0))
         //{
@@ -86,6 +93,13 @@ public class Figher : MonoBehaviour
             fireAudio.Play();
         }
         
+    }
+
+    public void ChangeCard()
+    {
+        string[] bgArr = { "blue", "green", "red", "yellow" };
+        card.SendMessage("SetBG", bgArr[Random.Range(0, bgArr.Length - 1)]);
+        card.SendMessage("SetNum", Random.Range(1, 8));
     }
 
     public void Zero()
