@@ -113,3 +113,4 @@ MonoBehaviour:
   - {fileID: -63456151823279830, guid: 43190aabf96fb5444a923c195775478e, type: 3}
   - {fileID: -1887703347353355409, guid: 43190aabf96fb5444a923c195775478e, type: 3}
   curSprite: {fileID: 5526905786802102038}
+  speed: 0.5
