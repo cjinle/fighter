@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 //using Lok.Tools;
 public class Figher : MonoBehaviour
@@ -8,7 +9,11 @@ public class Figher : MonoBehaviour
 
     public GameObject bulletPrefab;
     public GameObject cardPrefab;
+    public GameObject enemyPrefab;
 
+    int score = 0;
+
+    [SerializeField] Text scoreTxt;
     [SerializeField] AudioSource fireAudio;
 
     GameObject card;
@@ -20,13 +25,13 @@ public class Figher : MonoBehaviour
 
     void Start()
     {
-        
 
-        
-        Debug.Log("init card");
-        card = Instantiate(cardPrefab);
-        card.transform.position = Vector3.zero;
-        ChangeCard();
+        scoreTxt.text = score.ToString();
+        //Application.targetFrameRate = 60;
+        //Debug.Log("init card");
+        //card = Instantiate(cardPrefab);
+        //card.transform.position = Vector3.zero;
+        //ChangeCard();
         //transform.DOMove(Vector3.zero, 1f);
     }
 
@@ -52,7 +57,8 @@ public class Figher : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            ChangeCard();
+            //ChangeCard();
+            CreateEnemy();
         }
         //if (Input.GetMouseButton(0))
         //{
@@ -74,6 +80,8 @@ public class Figher : MonoBehaviour
             Fire();
             //ChangeCard();
             m_fireTime = 0;
+            score++;
+            scoreTxt.text = score.ToString();
         }
     }
 
@@ -94,6 +102,12 @@ public class Figher : MonoBehaviour
             fireAudio.Play();
         }
         
+    }
+
+    void CreateEnemy()
+    {
+        var enemy = Instantiate(enemyPrefab);
+        enemy.SendMessage("SetType", Random.Range(0, 100));
     }
 
     public void ChangeCard()

@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5526905786802102039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5526905786802102033}
+  - component: {fileID: 5526905786802102038}
+  - component: {fileID: 5526905786802102032}
+  m_Layer: 0
+  m_Name: Enemy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5526905786802102033
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5526905786802102039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.78, y: 0.95, z: 4.6896486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5526905786802102038
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5526905786802102039}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.8, y: 1.14}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &5526905786802102032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5526905786802102039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9a5352031ba2e42b3629097068662b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 442554814347424763, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -6516610503063940521, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -4293936939646118318, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -2272192411700397026, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: 1201596840246484334, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: 8080940243148636194, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -2281221415714066196, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -1491219551482223981, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: 6274995920813588332, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -8096921563534785139, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: 7977612958844478637, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: 9026629271662417093, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: 3088209868908662642, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -8042638864121600968, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -63456151823279830, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  - {fileID: -1887703347353355409, guid: 43190aabf96fb5444a923c195775478e, type: 3}
+  curSprite: {fileID: 5526905786802102038}
