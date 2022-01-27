@@ -16,7 +16,6 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
         if (collision.tag.Equals("Enemy"))
         {
             m_fighter.SendMessage("IncrScore");

@@ -23,6 +23,11 @@ public class Ctrl : MonoBehaviour
 
         if (bg1.position.x <= -20f)
         {
+            //
+            //dx = bg2.position.x + bg2.GetComponent<SpriteRenderer>().sprite.rect.width;
+            //Debug.Log("bg"+dx);
+            //Debug.Log("bg"+ bg2.position.x);
+            //Debug.Log("bg"+ bg2.GetComponent<SpriteRenderer>().sprite.rect.width);
             bg1.Translate(40f, 0, 0);
         }
         if (bg2.position.x <= -20f)
