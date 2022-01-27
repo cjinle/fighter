@@ -33,6 +33,7 @@ public class Figher : MonoBehaviour
         //card.transform.position = Vector3.zero;
         //ChangeCard();
         //transform.DOMove(Vector3.zero, 1f);
+        InvokeRepeating("CreateEnemy", .1f, 1f);
     }
 
     void Update()
@@ -80,9 +81,8 @@ public class Figher : MonoBehaviour
             Fire();
             //ChangeCard();
             m_fireTime = 0;
-            score++;
-            scoreTxt.text = score.ToString();
         }
+
     }
 
     void Fire()
@@ -95,6 +95,7 @@ public class Figher : MonoBehaviour
         //bullet.SendMessage("SetSpeed", 10f);
         Bullet tmp = bullet.GetComponent<Bullet>();
         tmp.m_speed = 10f;
+        tmp.m_fighter = this.gameObject;
 
         if (audioOpen)
         {
@@ -125,6 +126,12 @@ public class Figher : MonoBehaviour
     public void SetAudio()
     {
         audioOpen = !audioOpen;
+    }
+
+    public void IncrScore()
+    {
+        score++;
+        scoreTxt.text = score.ToString();
     }
 
 }

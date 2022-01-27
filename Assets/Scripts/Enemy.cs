@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
         transform.Translate(-step, 0, 0);
 
         var sp = Camera.main.WorldToScreenPoint(transform.position);
-        if (sp.x < -Screen.width/2)
+        if (sp.x < 0)
         {
             Destroy(gameObject);
         }
@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
             idx %= sprites.Length;
         }
         curSprite.sprite = sprites[idx];
-        transform.position = new Vector3(8f, Random.Range(-5f, 5f), 12);
+        transform.position = new Vector3(8f, Random.Range(-5f, 5f), 0);
         //float maxWidth = Screen.width / 2;
         //float maxHeight = Screen.height / 2;
         //var pos = new Vector3(Random.Range(-maxWidth, maxWidth), Random.Range(-maxHeight, maxHeight), 12);
