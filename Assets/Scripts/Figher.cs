@@ -10,6 +10,7 @@ public class Figher : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject cardPrefab;
     public GameObject enemyPrefab;
+    public GameObject settingsPrefab;
 
     int score = 0;
 
@@ -85,6 +86,21 @@ public class Figher : MonoBehaviour
 
     }
 
+    void OnGUI()
+    {
+        if (GUI.Button(new Rect(Screen.width - 120, Screen.height - 50, 80, 20), "Settings"))
+        {
+            Debug.Log("devsettings button click");
+            //GameObject.Find("/DevSettings").SetActive(true);
+            //Instantiate(GameObject.Find("/DevSettings"));
+            Instantiate(settingsPrefab);
+        }
+        //if (GUI.Button(new Rect(20, 70, 80, 20), "Move"))
+        //{
+        //    transform.DOMove(Vector3.zero, 1f);
+        //}
+    }
+
     void Fire()
     {
         var bullet = Instantiate(bulletPrefab);
@@ -118,9 +134,10 @@ public class Figher : MonoBehaviour
         card.SendMessage("SetNum", num);
     }
 
-    public void Zero()
+    public void IncrScore()
     {
-        transform.DOMove(Vector3.zero, 1f);
+        score++;
+        scoreTxt.text = score.ToString();
     }
 
     public void SetAudio()
@@ -128,10 +145,9 @@ public class Figher : MonoBehaviour
         audioOpen = !audioOpen;
     }
 
-    public void IncrScore()
+    public void MoveZero()
     {
-        score++;
-        scoreTxt.text = score.ToString();
+        transform.DOMove(Vector3.zero, 1f);
     }
 
 }
