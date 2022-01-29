@@ -93,7 +93,15 @@ public class Figher : MonoBehaviour
             Debug.Log("devsettings button click");
             //GameObject.Find("/DevSettings").SetActive(true);
             //Instantiate(GameObject.Find("/DevSettings"));
-            Instantiate(settingsPrefab);
+            var curSettings = FindObjectOfType<DevSettings>();
+            if (!curSettings)
+            {
+                Instantiate(settingsPrefab);
+            }
+            else
+            {
+                Destroy(curSettings.gameObject);
+            }
         }
         //if (GUI.Button(new Rect(20, 70, 80, 20), "Move"))
         //{
