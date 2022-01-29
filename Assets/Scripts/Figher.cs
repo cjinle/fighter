@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using DG.Tweening;
 //using Lok.Tools;
 public class Figher : MonoBehaviour
@@ -102,6 +103,10 @@ public class Figher : MonoBehaviour
             {
                 Destroy(curSettings.gameObject);
             }
+        }
+        if (GUI.Button(new Rect(Screen.width - 220, Screen.height - 50, 80, 20), "Test2"))
+        {
+            SceneManager.LoadScene("Test2");
         }
         //if (GUI.Button(new Rect(20, 70, 80, 20), "Move"))
         //{
