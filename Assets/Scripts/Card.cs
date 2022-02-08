@@ -41,4 +41,10 @@ public class Card : MonoBehaviour
         //transform.DOScaleX(1, 1f);
         //Debug.Log("SetBG: " + bgIdx + ", SetNum: " + num);
     }
+
+    public void Dump()
+    {
+        CurSprite.transform.DOMoveY(2f, 1f);
+    }
+
 }
